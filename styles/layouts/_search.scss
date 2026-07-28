@@ -1,0 +1,28 @@
+@use '../base/variables' as *;
+
+.section__search {
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  background-color: $colorBackgroundBase;
+
+  .search__title {
+    font-family: $fontTitle;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $colorTextMain;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+
+    text-shadow: 0 2px 10px rgba($colorAccent, 0.3);
+  }
+
+  .search__subtitle {
+    font-family: $fontBody;
+    font-size: 1.3rem;
+    color: $colorTextMuted;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-weight: $weightRegular;
+  }
+}

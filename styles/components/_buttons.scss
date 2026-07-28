@@ -1,0 +1,34 @@
+@use '../base/variables' as *;
+
+.search__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-family: $fontTitle;
+  font-weight: $weightRegular;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn__accent {
+  background-color: $colorAccent;
+  color: $colorBackgroundBase;
+  
+  &:hover {
+    background-color: $colorTextMain;
+    color: $colorBackgroundBase;
+    box-shadow: 0 0 20px rgba($colorAccent, 0.6);
+  }
+}
+
+
+.search__group .search__button {
+  border-radius: 0 50px 50px 0;
+  font-size: 1.1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

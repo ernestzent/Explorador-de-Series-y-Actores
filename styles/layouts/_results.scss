@@ -1,0 +1,36 @@
+@use '../base/variables' as *;
+
+.section__results {
+  padding: 4rem 0;
+  background-color: $colorBackgroundBase;
+}
+
+.section__title {
+  font-family: $fontTitle;
+  font-size: 2rem;
+  color: $colorTextMain;
+  margin-bottom: 2rem;
+  border-left: 4px solid $colorAccent;
+  padding-left: 1rem;
+}
+
+.movies__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.results__placeholder {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: $colorBackgroundSurface;
+  border-radius: 12px;
+  border: 1px dashed $colorTextMuted;
+  
+  .results__text {
+    color: $colorTextMuted;
+    font-family: $fontBody;
+    font-size: 1.2rem;
+  }
+}

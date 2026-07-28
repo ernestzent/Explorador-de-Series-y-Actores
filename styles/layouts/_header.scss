@@ -1,0 +1,30 @@
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.header {
+    @include flex-center;
+    padding: 1rem;
+    background-color: $colorBackgroundSurface;
+    color: $colorTextMain;
+    justify-content: space-between;
+    align-content: center;
+    box-sizing: border-box;
+
+    &__link {
+        width: 180px;
+        height: auto;
+
+        .header__logo {
+            width: 100%;
+        }
+    }
+
+    &__icon {
+        width: 80px;
+        cursor: pointer;
+
+        .header__menu {
+            width: 100%;
+        }
+    }
+}

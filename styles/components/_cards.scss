@@ -1,0 +1,70 @@
+@use '../base/variables' as *;
+
+.movie-card {
+  background-color: $colorBackgroundSurface;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba($colorAccent, 0.2);
+  }
+
+  &__poster {
+    width: 100%;
+    height: 330px;
+    object-fit: cover; 
+    background-color: #111;
+  }
+
+  &__info {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-family: $fontTitle;
+    font-size: 1.1rem;
+    color: $colorTextMain;
+    margin: 0 0 0.5rem 0;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__rating {
+    font-family: $fontBody;
+    font-size: 0.9rem;
+    color: $colorAccent;
+    margin-bottom: 1rem;
+    font-weight: $weightBold;
+  }
+
+  &__btn {
+    margin-top: auto;
+    text-align: center;
+    padding: 0.6rem;
+    background-color: transparent;
+    color: $colorTextMain;
+    border: 1px solid $colorAccentMute;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: $fontBody;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $colorAccent;
+      color: $colorBackgroundBase;
+      border-color: $colorAccent;
+    }
+  }
+}

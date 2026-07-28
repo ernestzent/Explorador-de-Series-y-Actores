@@ -1,0 +1,111 @@
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($colorBackgroundBase, 0.9);
+    backdrop-filter: blur(5px);
+  }
+
+  &__content {
+    position: relative;
+    background-color: $colorBackgroundSurface;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 12px;
+    overflow-y: auto;
+    z-index: 2001;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba($colorAccent, 0.2);
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: $colorTextMain;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $colorAccent;
+    }
+  }
+
+  &__body {
+    padding: 2rem;
+    
+    .details-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @include tablets {
+        flex-direction: row;
+      }
+
+      img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+        align-self: center;
+        @include tablets {
+          align-self: flex-start;
+        }
+      }
+
+      .details-info {
+        h2 {
+          font-family: $fontTitle;
+          color: $colorTextMain;
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+        }
+        
+        .badge {
+          display: inline-block;
+          background-color: rgba($colorAccent, 0.1);
+          color: $colorAccent;
+          padding: 0.2rem 0.6rem;
+          border-radius: 4px;
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-family: $fontBody;
+          color: $colorTextMuted;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}

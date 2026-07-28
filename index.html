@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.18.1/axios.min.js"></script>
+    <script src="js/function.js" defer></script>
+    <title>CineMaze</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="header__link">
+            <img class="header__logo" src="img/logo.png" alt="CineMaze Logo">
+        </a>
+        <i class="header__icon"><img class="header__menu" src="img/menu.png" alt="Menu"></i>
+    </header>
+
+    <main  class="main">
+        <nav class="sidebar__nav" id="sidebar-nav">
+            <i class="close__icon" id="close-icon"><img class="close__img" src="img/cross.png" alt="Cerrar menú"></i>
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Inicio</a></li>
+                <li><a href="series.html" class="nav__link">Series</a></li>
+                <li><a href="actor.html" class="nav__link">Actores</a></li>
+            </ul>
+        </nav>
+
+        <section class="section__search">
+            <div class="search__container">
+                <h1 class="search__title">Encuentra tu próxima historia favorita</h1>
+                <p class="search__subtitle">Busca entre miles de películas y series de televisión.</p>
+                
+                <form class="search__form" id="search-form">
+                    <div class="search__group">
+                        <input type="search" id="search-input" class="search__input" placeholder="Ej: Breaking Bad, Matrix..." required>
+                        <button type="submit" class="search__button btn__accent">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section__results" id="results-section">
+            <div class="container">
+                <h2 class="section__title">Resultados de búsqueda</h2>
+                <div class="movies__grid" id="movies-grid">
+
+                    <div class="results__placeholder" id="results-placeholder">
+                        <p class="results__text">Utiliza el buscador superior para encontrar contenido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p class="footer__text">&copy; 2026 CineMaze. Todos los derechos reservados. Creado por Ernesto Centeno Vilchis.</p>
+                <p class="footer__text">Datos proporcionados por <a href="https://www.tvmaze.com/api" target="_blank" rel="noopener noreferrer">TVMaze API</a>.</p>
+            </div>
+            
+            <div class="footer__social">
+                <a href="#" class="social__link" aria-label="YouTube">YouTube</a>
+                <a href="#" class="social__link" aria-label="Instagram">Instagram</a>
+                <a href="#" class="social__link" aria-label="TikTok">TikTok</a>
+                <a href="#" class="social__link" aria-label="Facebook">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="details-modal">
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close" aria-label="Cerrar detalles">&times;</button>
+            
+            <div class="modal__body" id="modal-body">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

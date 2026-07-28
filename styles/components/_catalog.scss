@@ -1,0 +1,60 @@
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.catalog {
+  padding: 6rem 0 4rem 0; 
+  background-color: $colorBackgroundBase;
+  min-height: 100vh;
+}
+
+.catalog__header {
+  margin-bottom: 3rem;
+  text-align: left;
+  border-bottom: 1px solid rgba($colorAccentMute, 0.2);
+  padding-bottom: 1.5rem;
+}
+
+.catalog__title {
+  font-family: $fontTitle;
+  font-size: 2.5rem;
+  color: $colorTextMain;
+  margin: 0 0 0.5rem 0;
+  
+  border-left: 5px solid $colorAccent;
+  padding-left: 1rem;
+}
+
+.catalog__subtitle {
+  font-family: $fontBody;
+  font-size: 1.1rem;
+  color: $colorTextMuted;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.results__placeholder {
+  
+  &--empty {
+    @include flex-center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 5rem 2rem;
+    
+    .placeholder__icon {
+      font-size: 4rem;
+      opacity: 0.8;
+    }
+
+    .placeholder__subtitle {
+      font-family: $fontTitle;
+      font-size: 1.5rem;
+      color: $colorTextMain;
+      margin: 0;
+    }
+  }
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}

@@ -1,0 +1,20 @@
+//Base
+@use 'base/base';
+@use 'base/functions';
+@use 'base/mixin';
+@use 'base/variables';
+
+//Components
+@use 'components/buttons';
+@use 'components/forms';
+@use 'components/inputs';
+@use 'components/sidebar';
+@use 'components/cards';
+@use 'components/catalog';
+@use 'components/modal';
+
+//Layouts
+@use 'layouts/header';
+@use 'layouts/footer';
+@use 'layouts/search';
+@use 'layouts/results';
